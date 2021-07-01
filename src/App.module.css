@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+/* bootstrap table paginator css link */
+@import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
+
+body{
+  background-color: gainsboro;
+  
+
+}
+
+.header{
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header span{
+  position: absolute;
+  right: 0;
+}
+.header h5{
+  font-size: 20px;
+  text-align: center;
+}
