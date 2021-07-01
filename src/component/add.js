@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Form } from "react-bootstrap";
 
 
 const Add=(props)=>{
@@ -24,56 +24,49 @@ const Add=(props)=>{
           Add Employee
         </Button>
       </div> */}
+
+      
       <Modal show={props.showModal} onHide={props.hideModal}>
         <Modal.Header closeButton>
           <Modal.Title>Add New Player</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <form>
-                <div className="form-control">
-                    <div className="form-group">
-                            <label>Id</label>
-                            <input type="text" className="form-control" placeholder="Id"  onChange={(e)=>setNo(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Name</label>
-                        <input type="text" className="form-control" placeholder="Name" onChange={(e)=>setName(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Age</label>
-                        <input type="text" className="form-control" placeholder="Age" onChange={(e)=>setAge(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Current Club</label>
-                        <input type="text" className="form-control" placeholder="Current Club" onChange={(e)=>setCurrentClub(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Position</label>
-                        <input type="text" className="form-control" placeholder="Position" onChange={(e)=>setPosition(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Debut Year</label>
-                        <input type="text" className="form-control" placeholder="Debut Year" onChange={(e)=>setDebutYear(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Previous Club</label>
-                        <input type="text" className="form-control" placeholder="Previous Club" onChange={(e)=>setPreviousClub(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Goals</label>
-                        <input type="text" className="form-control" placeholder="Goals" onChange={(e)=>setGoals(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Assists</label>
-                        <input type="text" className="form-control" placeholder="Assists" onChange={(e)=>setAssists(e.target.value)}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Free Kick Scored</label>
-                        <input type="text" className="form-control" placeholder="Free Kick Scored" onChange={(e)=>setFreeKickScored(e.target.value)}/>
-                    </div>
-                </div>
-                
-            </form>
+            <Form.Group >
+                  <Form.Label>Id: </Form.Label>
+                  <Form.Control type="text" placeholder="ID" onChange={(e)=>setNo(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Name: </Form.Label>
+                  <Form.Control type="text" placeholder="Name" onChange={(e)=>setName(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Age: </Form.Label>
+                  <Form.Control type="text" placeholder="Age" onChange={(e)=>setAge(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Position: </Form.Label>
+                  <Form.Control type="text" placeholder="Current Club" onChange={(e)=>setCurrentClub(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Debut Year: </Form.Label>
+                  <Form.Control type="text" placeholder="Debut Year" onChange={(e)=>setDebutYear(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Previous Club: </Form.Label>
+                  <Form.Control type="text" placeholder="Previous Club" onChange={(e)=>setPreviousClub(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Goals: </Form.Label>
+                  <Form.Control type="text" placeholder="Goals" onChange={(e)=>setGoals(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Assists: </Form.Label>
+                  <Form.Control type="text" placeholder="Assists" onChange={(e)=>setAssists(e.target.value)}/>           
+            </Form.Group>
+            <Form.Group >
+                  <Form.Label>Assists: </Form.Label>
+                  <Form.Control type="text" placeholder="Free Kick Scored" onChange={(e)=>setFreeKickScored(e.target.value)}/>           
+            </Form.Group>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={props.hideModal}>
